@@ -1,0 +1,215 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Config",
+    "definitions": {
+        "Config": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "misc": {
+                    "$ref": "#/definitions/Misc"
+                },
+                "screens": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Screen"
+                    }
+                },
+                "home-screen": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "files": {
+                    "$ref": "#/definitions/Files"
+                }
+            },
+            "required": [
+                "home-screen",
+                "misc",
+                "screens"
+            ],
+            "title": "Temperatures"
+        },
+        "Misc": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "screen-rotation": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "screen-rotation"
+            ],
+            "title": "Misc"
+        },
+        "Screen": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "dispName": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "layout": {
+                    "type": "string"
+                },
+                "tiles": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Tile"
+                    }
+                },
+                "actions": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Action"
+                    }
+                }
+            },
+            "required": [
+                "dispName",
+                "layout",
+                "name"
+            ],
+            "title": "Screen"
+        },
+        "Action": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "active": {
+                    "type": "boolean"
+                },
+                "http": {
+                    "$ref": "#/definitions/HTTP"
+                },
+                "scheme": {
+                    "type": "string",
+                    "enum": ["1x", "2x", "long"]
+                },
+                "trigger": {
+                    "type": "string",
+                    "enum": ["btn1", "btn2", "btn3", "btn4", "btn*", "timer", "on-enter"]
+                },
+                "screen": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "delay": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "trigger"
+            ],
+            "title": "Action"
+        },
+        "HTTP": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "method": {
+                    "type": "string"
+                },
+                "payload": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "http",
+                        "https"
+                    ]
+                },
+                "ondone": {
+                    "$ref": "#/definitions/Ondone"
+                }
+            },
+            "required": [
+                "method",
+                "url"
+            ],
+            "title": "HTTP"
+        },
+        "Ondone": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "then": {
+                    "$ref": "#/definitions/ThenElse"
+                },
+                "else": {
+                    "$ref": "#/definitions/ThenElse"
+                }
+            },
+            "title": "Ondone"
+        },
+        "ThenElse": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "screen": {
+                    "type": "string",
+                    "format": "integer"
+                }
+            },
+            "required": [
+                "screen"
+            ],
+            "title": "ThenElse"
+        },
+        "Tile": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "txt": {
+                    "type": "string"
+                },
+                "ico": {
+                    "type": "string"
+                }
+            },
+            "required": [
+            ],
+            "title": "Tile"
+        },
+        "Files": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "bmp": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/BMP"
+                    }
+                }
+            },
+            "required": [
+                "bmp"
+            ],
+            "title": "Files"
+        },
+        "BMP": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "data": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "data",
+                "name"
+            ],
+            "title": "BMP"
+        }
+    }
+}

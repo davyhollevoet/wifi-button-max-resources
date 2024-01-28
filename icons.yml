@@ -1,0 +1,433 @@
+home-screen: icons
+misc:
+  screen-rotation: false
+screens:
+  - name: icons
+    dispName: icons
+    layout: 3N-ico-text
+    actions:
+      # these actions will be added to each subscreen
+      - trigger: btn4
+        scheme: long
+        screen: icons
+    tiles:
+      - ico: switch-eu
+        txt: switch-eu
+      - ico: abort
+        txt: abort
+      - ico: angle-0
+        txt: angle-0
+      - ico: angle-22
+        txt: angle-22
+      - ico: angle-45
+        txt: angle-45
+      - ico: angle-77
+        txt: angle-77
+      - ico: angle-90
+        txt: angle-90
+        actions:
+          # an example of actions defined in the tile. trigger is set by the script to match the tile number
+          - scheme: 1x
+            screen: icons
+      - ico: battery-big
+        txt: battery-big
+      - ico: crossed-circle
+        txt: crossed-circle
+      - ico: down
+        txt: down
+      - ico: minus
+        txt: minus
+      - ico: next
+        txt: next
+      - ico: play-pause
+        txt: play-pause
+      - ico: plus
+        txt: plus
+      - ico: prev
+        txt: prev
+      - ico: skip
+        txt: skip
+      - ico: sync
+        txt: sync
+      - ico: vol+
+        txt: vol+
+      - ico: vol-
+        txt: vol-
+      - ico: zero
+        txt: zero
+      - ico: new_bulb_home
+        txt: new_bulb_home
+      - ico: solar_production_home
+        txt: solar_production_home
+      - ico: bottom_up
+        txt: bottom_up
+      - ico: button_green
+        txt: button_green
+      - ico: button_press_actions
+        txt: button_press_actions
+      - ico: button_power
+        txt: button_power
+      - ico: button_bulb
+        txt: button_bulb
+      - ico: alarm_system
+        txt: alarm_system
+      - ico: brightness_actions
+        txt: brightness_actions
+      - ico: button_heart
+        txt: button_heart
+      - ico: audio_tv
+        txt: audio_tv
+      - ico: button_0
+        txt: button_0
+      - ico: bar1
+        txt: bar1
+      - ico: aquarium
+        txt: aquarium
+      - ico: button_8
+        txt: button_8
+      - ico: button_star
+        txt: button_star
+      - ico: button_grey_outline
+        txt: button_grey_outline
+      - ico: button_grey
+        txt: button_grey
+      - ico: button_home
+        txt: button_home
+      - ico: balcony
+        txt: balcony
+      - ico: button_green_outline
+        txt: button_green_outline
+      - ico: button_profile
+        txt: button_profile
+      - ico: button_purple
+        txt: button_purple
+      - ico: ball
+        txt: ball
+      - ico: add_scene
+        txt: add_scene
+      - ico: button_6
+        txt: button_6
+      - ico: button_switch
+        txt: button_switch
+      - ico: button_7
+        txt: button_7
+      - ico: button_red
+        txt: button_red
+      - ico: button_9
+        txt: button_9
+      - ico: 3d_printer
+        txt: 3d_printer
+      - ico: audio_and_tv
+        txt: audio_and_tv
+      - ico: alarms
+        txt: alarms
+      - ico: button_web
+        txt: button_web
+      - ico: cooking_device
+        txt: cooking_device
+      - ico: dingz_led
+        txt: dingz_led
+      - ico: garden
+        txt: garden
+      - ico: central_power
+        txt: central_power
+      - ico: dingz_button_5
+        txt: dingz_button_5
+      - ico: computer_accesory
+        txt: computer_accesory
+      - ico: devicesettings
+        txt: devicesettings
+      - ico: heater2
+        txt: heater2
+      - ico: heater
+        txt: heater
+      - ico: desk
+        txt: desk
+      - ico: energy_strip
+        txt: energy_strip
+      - ico: coffee_machine
+        txt: coffee_machine
+      - ico: buttonsfolder
+        txt: buttonsfolder
+      - ico: corridor
+        txt: corridor
+      - ico: dingz_button_3
+        txt: dingz_button_3
+      - ico: heater_aircon2
+        txt: heater_aircon2
+      - ico: dimmer
+        txt: dimmer
+      - ico: energy_bulb
+        txt: energy_bulb
+      - ico: dingz_button_2
+        txt: dingz_button_2
+      - ico: colors
+        txt: colors
+      - ico: game_console
+        txt: game_console
+      - ico: camera_security
+        txt: camera_security
+      - ico: dingz_button_1
+        txt: dingz_button_1
+      - ico: computer_accessory
+        txt: computer_accessory
+      - ico: energy_strip_eu
+        txt: energy_strip_eu
+      - ico: dingz_pir
+        txt: dingz_pir
+      - ico: fridge
+        txt: fridge
+      - ico: hanging
+        txt: hanging
+      - ico: dingz_button_4
+        txt: dingz_button_4
+      - ico: heater_aircon
+        txt: heater_aircon
+      - ico: e_bike
+        txt: e_bike
+      - ico: scenes_folder
+        txt: scenes_folder
+      - ico: scene_star_purple
+        txt: scene_star_purple
+      - ico: scene_dot_purple
+        txt: scene_dot_purple
+      - ico: set_top_box
+        txt: set_top_box
+      - ico: scene_good_night
+        txt: scene_good_night
+      - ico: scene_home_leave
+        txt: scene_home_leave
+      - ico: scene_default
+        txt: scene_default
+      - ico: scene_dot_grey
+        txt: scene_dot_grey
+      - ico: stereo
+        txt: stereo
+      - ico: scene_home_come
+        txt: scene_home_come
+      - ico: stage
+        txt: stage
+      - ico: scene_heart_grey
+        txt: scene_heart_grey
+      - ico: stand
+        txt: stand
+      - ico: scene_switches
+        txt: scene_switches
+      - ico: shade
+        txt: shade
+      - ico: scene_switch
+        txt: scene_switch
+      - ico: scene_star_green
+        txt: scene_star_green
+      - ico: xmas_tree
+        txt: xmas_tree
+      - ico: washing_machine2
+        txt: washing_machine2
+      - ico: temperature_actions
+        txt: temperature_actions
+      - ico: scene_surveillance
+        txt: scene_surveillance
+      - ico: water_pump
+        txt: water_pump
+      - ico: scene_heart_purple
+        txt: scene_heart_purple
+      - ico: scene_heart_white
+        txt: scene_heart_white
+      - ico: scene_star_red
+        txt: scene_star_red
+      - ico: solar_actions
+        txt: solar_actions
+      - ico: vase
+        txt: vase
+      - ico: scene_dot_red
+        txt: scene_dot_red
+      - ico: washing_machine
+        txt: washing_machine
+      - ico: switch_adapter_eu
+        txt: switch_adapter_eu
+      - ico: switch_adapter
+        txt: switch_adapter
+      - ico: sideboard2
+        txt: sideboard2
+      - ico: scene_heart_red
+        txt: scene_heart_red
+      - ico: scene_home
+        txt: scene_home
+      - ico: scene_heart_green
+        txt: scene_heart_green
+      - ico: scene_good_morning
+        txt: scene_good_morning
+      - ico: scene_power
+        txt: scene_power
+      - ico: solar_production
+        txt: solar_production
+      - ico: scene_star_white
+        txt: scene_star_white
+      - ico: solar
+        txt: solar
+      - ico: scene_bulbs
+        txt: scene_bulbs
+      - ico: sonos
+        txt: sonos
+      - ico: scene_star_grey
+        txt: scene_star_grey
+      - ico: scene_dot_green
+        txt: scene_dot_green
+      - ico: telefone
+        txt: telefone
+      - ico: scene_light
+        txt: scene_light
+      - ico: spot
+        txt: spot
+      - ico: sideboard1
+        txt: sideboard1
+      - ico: stairs
+        txt: stairs
+      - ico: new_adapter_eu
+        txt: new_adapter_eu
+      - ico: saver
+        txt: saver
+      - ico: power_actions
+        txt: power_actions
+      - ico: new_dingz
+        txt: new_dingz
+      - ico: led_strip2
+        txt: led_strip2
+      - ico: pool2
+        txt: pool2
+      - ico: pir2
+        txt: pir2
+      - ico: motion_status
+        txt: motion_status
+      - ico: new_button
+        txt: new_button
+      - ico: radio
+        txt: radio
+      - ico: new_pir
+        txt: new_pir
+      - ico: indirect
+        txt: indirect
+      - ico: office_device
+        txt: office_device
+      - ico: new_strip
+        txt: new_strip
+      - ico: new_bulb
+        txt: new_bulb
+      - ico: scene_bulb
+        txt: scene_bulb
+      - ico: kitchen
+        txt: kitchen
+      - ico: mystromsettings
+        txt: mystromsettings
+      - ico: pc_mac
+        txt: pc_mac
+      - ico: computer
+        txt: computer
+      - ico: pool3
+        txt: pool3
+      - ico: kitchen_appliance
+        txt: kitchen_appliance
+      - ico: production_counter
+        txt: production_counter
+      - ico: plc_adapter
+        txt: plc_adapter
+      - ico: power_meter
+        txt: power_meter
+      - ico: lamp_bulb
+        txt: lamp_bulb
+      - ico: motion_actions
+        txt: motion_actions
+      - ico: pool1
+        txt: pool1
+      - ico: new_cube
+        txt: new_cube
+      - ico: pir1
+        txt: pir1
+      - ico: led_strip
+        txt: led_strip
+      - ico: robot
+        txt: robot
+      - ico: new_adapter
+        txt: new_adapter
+      - ico: favorite
+        txt: favorite
+      - ico: network
+        txt: network
+      - ico: moped
+        txt: moped
+      - ico: server_2
+        txt: server_2
+      - ico: caravan
+        txt: caravan
+      - ico: baby_bottle
+        txt: baby_bottle
+      - ico: house_0
+        txt: house_0
+      - ico: house_1
+        txt: house_1
+      - ico: house_2
+        txt: house_2
+      - ico: house_3
+        txt: house_3
+      - ico: house_4
+        txt: house_4
+      - ico: car_charger
+        txt: car_charger
+      - ico: square
+        txt: square
+      - ico: scenes
+        txt: scenes
+      - ico: candle
+        txt: candle
+      - ico: filament
+        txt: filament
+      - ico: attic
+        txt: attic
+      - ico: baby_room
+        txt: baby_room
+      - ico: basement
+        txt: basement
+      - ico: bath
+        txt: bath
+      - ico: bedroom
+        txt: bedroom
+      - ico: boy_room
+        txt: boy_room
+      - ico: cinema
+        txt: cinema
+      - ico: dining
+        txt: dining
+      - ico: fitness
+        txt: fitness
+      - ico: gallery
+        txt: gallery
+      - ico: garage
+        txt: garage
+      - ico: girl_room
+        txt: girl_room
+      - ico: laundry
+        txt: laundry
+      - ico: living_room
+        txt: living_room
+      - ico: lounge
+        txt: lounge
+      - ico: music
+        txt: music
+      - ico: office
+        txt: office
+      - ico: other
+        txt: other
+      - ico: play_room
+        txt: play_room
+      - ico: server_room
+        txt: server_room
+      - ico: shower
+        txt: shower
+      - ico: storage
+        txt: storage
+      - ico: toilet
+        txt: toilet
+      - ico: unassigned
+        txt: unassigned
+      - ico: wardrobe
+        txt: wardrobe
