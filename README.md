@@ -1,4 +1,4 @@
-# WiFi Button Max resources
+# myStrom WiFi Button Max resources
 
 This repository contains some files and scripts that can be useful for user of [myStrom WiFi Button Max devices](https://mystrom.ch/wifi-button-max/) that run the [Button Max Custom Firmware](https://mystrom.ch/support/mystrom-button-max-tool/).
 
@@ -13,11 +13,50 @@ myStrom provides the [myStrom Button Max Tool](https://mystrom.ch/support/mystro
 
 A JSON Schema that can be used to check whether the config you want to upload to the device, is in fact valid. The schema has been constructed from a few files produced by the Button Max Tool and extended by looking at the firmware.
 
-TODO: list the extra features
-
 ```shell
 jsonschema schema.json -i my_screens.json
 ```
+
+#### Extra features
+
+The following features are not supported (yet?) by the [myStrom Button Max Tool](https://mystrom.ch/support/mystrom-button-max-tool/), but they are implemented in firmware 1.1.10 on the device.
+
+* `http/ondone` Which screen to switch to after an HTTP action has completed (`then`) or failed (`else`).
+  ```json
+  "actions": [
+    {
+      "http": {
+        "...": "..."
+        "ondone": {
+          "then": {
+            "screen": "call_ok"
+          },
+          "else": {
+            "screen": "call_failed"
+          }
+        }
+      },
+      "scheme": "long",
+      "trigger": "btn1"
+    }
+  ]
+  ```
+* `on-enter` Perform an action when a screen is entered
+  ```json
+  "actions": [
+    {
+      "trigger": "on-enter",
+      "http": {
+        ...
+      }
+    }
+  ]
+  ```
+
+#### More extra features?
+
+* The firmware hints at a feature that blinks the led a number of times in a specified color and at a given speed (`color`, `times`, `speed`). I've not been able to get that to work.
+* There is also mention of `while` and `@current`, which may point to extra features.
 
 ### icons
 
@@ -97,8 +136,3 @@ A small script to convert a YAML config file into a proper JSON config file (I j
       target:
         entity_id: light.some_light
   ```
-
-## Open questions
-
-* The firmware hints at a feature that blinks the led a number of times in a specified color and at a given speed (`color`, `times`, `speed`). I've not been able to get that to work.
-* There is also mention of `while` and `@current`, which may point to extra features.

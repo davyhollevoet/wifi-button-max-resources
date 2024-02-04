@@ -1,0 +1,52 @@
+---
+home-screen: home
+misc:
+  screen-rotation: false
+screens:
+  - name: home
+    dispName: menu
+    layout: 4-ico-text
+    actions:
+      - trigger: btn4
+        scheme: 1x
+        http:
+          method: POST
+          url: http://some_host/fail
+          payload: action=btn4
+          ondone:
+            then:
+              screen: call_ok
+            else:
+              screen: call_fail
+      - trigger: btn2
+        scheme: 1x
+        http:
+          method: POST
+          url: http://some_host/succeed
+          payload: action=btn2
+          ondone:
+            then:
+              screen: call_ok
+            else:
+              screen: call_fail
+    tiles:
+      - txt: ''
+      - ico: house_0
+      - txt: ''
+      - ico: house_1
+  - name: call_ok
+    dispName: Call ok
+    layout: ico-text
+    tiles:
+      - txt: Call OK
+  - name: call_fail
+    dispName: Call fail
+    layout: ico-text
+    tiles:
+      - txt: Call FAIL
+    actions:
+      - trigger: on-enter
+        http:
+          method: POST
+          url: http://some_host/log
+          payload: action=call_failed

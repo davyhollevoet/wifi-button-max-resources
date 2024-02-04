@@ -28,7 +28,7 @@
                 "misc",
                 "screens"
             ],
-            "title": "Temperatures"
+            "title": "Config"
         },
         "Misc": {
             "type": "object",
@@ -61,7 +61,8 @@
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/Tile"
-                    }
+                    },
+                    "maxItems": 4
                 },
                 "actions": {
                     "type": "array",

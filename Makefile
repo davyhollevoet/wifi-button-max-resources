@@ -4,6 +4,12 @@ HOST=...
 upload: $(F).json
 	curl -v -n -d @$(F).json http://$(HOST)/api/v1/config
 
+info:
+	curl -v -n http://$(HOST)/api/v1/info
+
+config:
+	curl -v -n http://$(HOST)/api/v1/config | jq . -
+
 # run as `make check F=project`
 check: $(F).json
 	jsonschema -i $(F).json schema.json
